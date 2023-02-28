@@ -11,20 +11,427 @@
       span.underline{text-decoration: underline;}
       div.column{display: inline-block; vertical-align: top; width: 50%;}
   </style>
+  <style>
+html {
+  font-size: 100%;
+  overflow-y: scroll;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+body {
+  color: #444;
+  font-family: Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif;
+  font-size: 12px;
+  line-height: 1.7;
+  padding: 1em;
+  margin: auto;
+  max-width: 42em;
+  background: #fefefe;
+}
+
+a {
+  color: #0645ad;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #0b0080;
+}
+
+a:hover {
+  color: #06e;
+}
+
+a:active {
+  color: #faa700;
+}
+
+a:focus {
+  outline: thin dotted;
+}
+
+*::-moz-selection {
+  background: rgba(255, 255, 0, 0.3);
+  color: #000;
+}
+
+*::selection {
+  background: rgba(255, 255, 0, 0.3);
+  color: #000;
+}
+
+a::-moz-selection {
+  background: rgba(255, 255, 0, 0.3);
+  color: #0645ad;
+}
+
+a::selection {
+  background: rgba(255, 255, 0, 0.3);
+  color: #0645ad;
+}
+
+p {
+  margin: 1em 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #111;
+  line-height: 125%;
+  margin-top: 2em;
+  font-weight: normal;
+}
+
+h4, h5, h6 {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+h4 {
+  font-size: 1.2em;
+}
+
+h5 {
+  font-size: 1em;
+}
+
+h6 {
+  font-size: 0.9em;
+}
+
+blockquote {
+  color: #666666;
+  margin: 0;
+  padding-left: 3em;
+  border-left: 0.5em #EEE solid;
+}
+
+hr {
+  display: block;
+  height: 2px;
+  border: 0;
+  border-top: 1px solid #aaa;
+  border-bottom: 1px solid #eee;
+  margin: 1em 0;
+  padding: 0;
+}
+
+pre, code, kbd, samp {
+  color: #000;
+  font-family: monospace, monospace;
+  _font-family: 'courier new', monospace;
+  font-size: 0.98em;
+}
+
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+b, strong {
+  font-weight: bold;
+}
+
+dfn {
+  font-style: italic;
+}
+
+ins {
+  background: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+mark {
+  background-color: #b1e1ff;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+ul, ol {
+  margin: 1em 0;
+  padding: 0 0 0 2em;
+}
+
+li p:last-child {
+  margin-bottom: 0;
+}
+
+ul ul, ol ol {
+  margin: .3em 0;
+}
+
+dl {
+  margin-bottom: 1em;
+}
+
+dt {
+  font-weight: bold;
+  margin-bottom: .8em;
+}
+
+dd {
+  margin: 0 0 .8em 2em;
+}
+
+dd:last-child {
+  margin-bottom: 0;
+}
+
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+  vertical-align: middle;
+}
+
+figure {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+figure img {
+  border: none;
+  margin: 0 auto;
+}
+
+figcaption {
+  font-size: 0.8em;
+  font-style: italic;
+  margin: 0 0 .8em;
+}
+
+table {
+  margin-bottom: 2em;
+  border-bottom: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+table th {
+  padding: .2em 1em;
+  background-color: #eee;
+  border-top: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+}
+
+table td {
+  padding: .2em 1em;
+  border-top: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  vertical-align: top;
+}
+
+.author {
+  font-size: 1.2em;
+  text-align: center;
+}
+
+@media only screen and (min-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+}
+@media print {
+  * {
+    background: transparent !important;
+    color: black !important;
+    filter: none !important;
+    -ms-filter: none !important;
+  }
+
+  body {
+    font-size: 12pt;
+    max-width: 100%;
+  }
+
+  a, a:visited {
+    text-decoration: underline;
+  }
+
+  hr {
+    height: 1px;
+    border: 0;
+    border-bottom: 1px solid black;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+    content: "";
+  }
+
+  pre, blockquote {
+    border: 1px solid #999;
+    padding-right: 1em;
+    page-break-inside: avoid;
+  }
+
+  tr, img {
+    page-break-inside: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+
+  @page :left {
+    margin: 15mm 20mm 15mm 10mm;
+}
+
+  @page :right {
+    margin: 15mm 10mm 15mm 20mm;
+}
+
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2, h3 {
+    page-break-after: avoid;
+  }
+}
+
+  </style>
   <link rel="stylesheet" href="main.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
 </head>
 <body>
 <h1 id="notas---unidad-0">Notas - Unidad 0</h1>
-<h2 id="equation">Equation</h2>
-<p><span class="math display">\[
-    \Large
-    \int_{\partial\Omega} \omega = \int_{\Omega} \mathrm{d}\omega \,.
-    \label{eq:stokes}
+<h2 id="repaso-de-funciones">Repaso de funciones</h2>
+<h3 id="definición-de-función">Definición de función</h3>
+<p>Una función <span class="math inline">\(f\)</span> es una regla que asigna a cada elemento <span class="math inline">\(x\)</span> en un conjunto <span class="math inline">\(D\)</span> exactamente un elemento, llamado <span class="math inline">\(f(x)\)</span>, en un conjunto <span class="math inline">\(E\)</span>.</p>
+<h3 id="funciones-crecientes-y-decrecientes">Funciones crecientes y decrecientes</h3>
+<p>Una función es <strong>creciente</strong> en un intervalo <span class="math inline">\(I\)</span> si <span class="math display">\[
+    f(x_1) &lt; f(x_2) \;\; con \; x_1 &lt; x_2 \; en \; I
 \]</span></p>
-<h2 id="image">Image</h2>
-<figure>
-<img src="images/image.png" title="This is an image" alt="This is an image" /><figcaption>This is an image</figcaption>
-</figure>
+<p>Una función es <strong>decreciente</strong> en un intervalo <span class="math inline">\(I\)</span> si <span class="math display">\[
+    f(x_1) &gt; f(x_2) \;\; con \; x_1 &lt; x_2 \; en \; I
+\]</span></p>
+<h3 id="qué-nos-dice-f-sobre-f">¿Qué nos dice <span class="math inline">\(f&#39;\)</span> sobre <span class="math inline">\(f\)</span>?</h3>
+<ul>
+<li>Si <span class="math inline">\(f&#39;(x) &gt; 0\)</span> en un intervalo, entonces <span class="math inline">\(f\)</span> es creciente en ese intervalo</li>
+<li>Si <span class="math inline">\(f&#39;(x) &lt; 0\)</span> en un intervalo, entonces <span class="math inline">\(f\)</span> es decreciente en ese intervalo</li>
+</ul>
+<h3 id="concavidad">Concavidad</h3>
+<p>Si el gráfico de <span class="math inline">\(f\)</span> esta por encima de todas sus tangentes en un intervalo <span class="math inline">\(I\)</span>, entonces se dice <strong>cóncava hacia arriba</strong> en <span class="math inline">\(I\)</span>. Análogamente, si el gráfico de <span class="math inline">\(f\)</span> está por debajo de de todas sus tangentes en <span class="math inline">\(I\)</span> se dice <strong>cóncava hacia abajo</strong> en <span class="math inline">\(I\)</span>.</p>
+<h3 id="qué-nos-dice-f-sobre-f-1">¿Qué nos dice <span class="math inline">\(f&#39;&#39;\)</span> sobre <span class="math inline">\(f\)</span>?</h3>
+<ul>
+<li>Si <span class="math inline">\(f&#39;&#39;(x) &gt; 0\)</span> <span class="math inline">\(\forall x\)</span> en <span class="math inline">\(I\)</span>, entonces <span class="math inline">\(f\)</span> es cóncava hacia arriba en <span class="math inline">\(I\)</span></li>
+<li>Si <span class="math inline">\(f&#39;&#39;(x) &lt; 0\)</span> <span class="math inline">\(\forall x\)</span> en <span class="math inline">\(I\)</span>, entonces <span class="math inline">\(f\)</span> es cóncava hacia abajo en <span class="math inline">\(I\)</span></li>
+</ul>
+<h3 id="punto-de-inflexión">Punto de inflexión</h3>
+<p>Un punto <span class="math inline">\(P\)</span> en una curva <span class="math inline">\(y = f(x)\)</span> se llama punto de inflexión, si <span class="math inline">\(f\)</span> es continua en dicho punto y la curva pasa de un tipo de concavidad a otra en <span class="math inline">\(P\)</span>.</p>
+<h3 id="extremos-absolutos">Extremos absolutos</h3>
+<p>Una función <span class="math inline">\(f\)</span> tiene un <strong>máximo absoluto</strong> en <span class="math inline">\(c\)</span> si <span class="math inline">\(f(c) \ge f(x) \; \forall \; x\)</span> en <span class="math inline">\(D\)</span>, donde <span class="math inline">\(D\)</span> es el dominio de <span class="math inline">\(f\)</span>. El valor <span class="math inline">\(f(c)\)</span> se llama <strong>valor máximo</strong>.<br />
+Análogamente, <span class="math inline">\(f\)</span> tiene un <strong>mínimo absoluto</strong> en <span class="math inline">\(c\)</span> si <span class="math inline">\(f(c) \le f(x) \; \forall \; x\)</span> en <span class="math inline">\(D\)</span> y el valor <span class="math inline">\(f(c)\)</span> se llama <strong>valor mínimo</strong>.<br />
+Los valores máximos y mínimos de <span class="math inline">\(f\)</span> se llaman <strong>valores extremos</strong> de <span class="math inline">\(f\)</span>.</p>
+<h3 id="extremos-relativos">Extremos relativos</h3>
+<p>Una función <span class="math inline">\(f\)</span> tiene un <strong>máximo relativo</strong> en <span class="math inline">\(c\)</span> si <span class="math inline">\(f(c) \ge f(x)\)</span> cuando <span class="math inline">\(x\)</span> está cerca de <span class="math inline">\(c\)</span>. [Esto significa que <span class="math inline">\(f(c) \ge f(x) \; \forall \; x\)</span> en algún intervalo abierto que contiene a <span class="math inline">\(c\)</span>.]<br />
+Análogamente, <span class="math inline">\(f\)</span> tiene un <strong>mínimo local</strong> en <span class="math inline">\(c\)</span> si <span class="math inline">\(f(c) \le f(x)\)</span> cuando <span class="math inline">\(x\)</span> está cerca de <span class="math inline">\(c\)</span>.</p>
+<h3 id="puntos-críticos">Puntos críticos</h3>
+<p>Agregar … (definicion 6 pag 274)</p>
+<h2 id="un-problema-de-optimización-y-análisis">Un problema de optimización y análisis</h2>
+<h3 id="el-problema">El problema</h3>
+<p>Hallar las dimensiones de una lata de gaseosa cilíndrica con un volúmen fijo <span class="math inline">\(V\)</span> que tiene la menor área superficial posible (de esta forma utilizando menos material y reduciendo los costos de manufactura).</p>
+<h3 id="una-posible-solución">Una posible solución</h3>
+<p>Definamos <span class="math inline">\(r\)</span> como el radio del cilindro y <span class="math inline">\(h\)</span> como su altura. El volumen <span class="math inline">\(V\)</span> es constante (fijo).<br />
+El área del cilindro es la suma del área de la tapa de arriba, la tapa de abajo y el área lateral. Esto es:<br />
+<span class="math display">\[
+    A = superior + inferior + lateral
+\]</span></p>
+<p>Sabiendo que el área de un círculo es <span class="math inline">\(\pi r^2\)</span> y el área lateral es <span class="math inline">\(2 \pi r h\)</span></p>
+<p><span class="math display">\[
+    \begin{aligned}
+        A &amp; = \pi r^2 + \pi r^2 + 2 \pi r h \\
+        &amp; = 2 \pi r^2 + 2 \pi r h
+    \end{aligned}
+\]</span></p>
+<p>El volúmen <span class="math inline">\(V\)</span> de un cilindro es: <span class="math display">\[
+    V = \pi r^2 * h
+\]</span></p>
+<p>Entonces:</p>
+<p><span class="math display">\[
+    h = \frac{V}{\pi r^2}
+\]</span></p>
+<p>De este modo, podemos reemplazar esta expresión de <span class="math inline">\(h\)</span> en la ecuación del área. <span class="math display">\[
+    \begin{aligned}
+    A &amp; = 2 \pi r^2 + 2 \pi r (\frac{V}{\pi r^2}) \\
+    &amp; = 2 \pi r^2 + \frac{2V}{r}
+    \end{aligned}
+\]</span></p>
+<p>Observando esto, podemos ver que el área está en función del radio <span class="math inline">\(r\)</span>. De modo que podemos decir que el área es una función <span class="math inline">\(A(r)\)</span></p>
+<p><span class="math display">\[
+    A(r) = 2 \pi r^2+ \frac{2V}{r}
+\]</span></p>
+<blockquote>
+<p>Hay que tener en cuenta que <span class="math inline">\(r &gt; 0\)</span> por ende <span class="math inline">\(A(r)\)</span> tiene como dominio <span class="math inline">\(\mathbb{R_{&gt;0}}\)</span>.<br />
+Además la función no está definida en <span class="math inline">\(r = 0\)</span></p>
+</blockquote>
+<p>Ahora tenemos la función que necesitamos minimizar.</p>
+<p>Comenzaremos por hallar puntos críticos de la función. Derivando encontramos: <span class="math display">\[
+    A&#39;(r) = 4 \pi r - \frac{2V}{r^2}
+\]</span></p>
+<p>Buscamos el valor <span class="math inline">\(r\)</span> para el cual <span class="math inline">\(A&#39;(r) = 0\)</span></p>
+<p><span class="math display">\[
+    \begin{aligned}
+        A&#39;(r) &amp;= 0 \\ \\
+        4 \pi r - \frac{2V}{r^2} &amp;= 0 \\ \\
+        4 \pi r &amp;= \frac{2V}{r^2} \\ \\
+        r^3 &amp;= \frac{2V}{4 \pi} \\ \\
+        r^3 &amp;= \frac{V}{2 \pi} \\ \\
+        r &amp;= \sqrt[3]{\frac{V}{2 \pi}}
+    \end{aligned}
+\]</span></p>
+<p>Un punto crítico para <span class="math inline">\(r\)</span> es <span class="math display">\[
+    r = \sqrt[3]{\frac{V}{2 \pi}}
+\]</span></p>
+<p>Ahora necesitamos confirmar que esto es un mínimo (relativo), y además que es el mínimo absoluto.</p>
+<p>… continuar</p>
 </body>
 </html>
