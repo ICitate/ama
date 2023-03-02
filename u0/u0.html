@@ -11,333 +11,6 @@
       span.underline{text-decoration: underline;}
       div.column{display: inline-block; vertical-align: top; width: 50%;}
   </style>
-  <style>
-html {
-  font-size: 100%;
-  overflow-y: scroll;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-}
-
-body {
-  color: #444;
-  font-family: Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif;
-  font-size: 12px;
-  line-height: 1.7;
-  padding: 1em;
-  margin: auto;
-  max-width: 42em;
-  background: #fefefe;
-}
-
-a {
-  color: #0645ad;
-  text-decoration: none;
-}
-
-a:visited {
-  color: #0b0080;
-}
-
-a:hover {
-  color: #06e;
-}
-
-a:active {
-  color: #faa700;
-}
-
-a:focus {
-  outline: thin dotted;
-}
-
-*::-moz-selection {
-  background: rgba(255, 255, 0, 0.3);
-  color: #000;
-}
-
-*::selection {
-  background: rgba(255, 255, 0, 0.3);
-  color: #000;
-}
-
-a::-moz-selection {
-  background: rgba(255, 255, 0, 0.3);
-  color: #0645ad;
-}
-
-a::selection {
-  background: rgba(255, 255, 0, 0.3);
-  color: #0645ad;
-}
-
-p {
-  margin: 1em 0;
-}
-
-img {
-  max-width: 100%;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  color: #111;
-  line-height: 125%;
-  margin-top: 2em;
-  font-weight: normal;
-}
-
-h4, h5, h6 {
-  font-weight: bold;
-}
-
-h1 {
-  font-size: 2.5em;
-}
-
-h2 {
-  font-size: 2em;
-}
-
-h3 {
-  font-size: 1.5em;
-}
-
-h4 {
-  font-size: 1.2em;
-}
-
-h5 {
-  font-size: 1em;
-}
-
-h6 {
-  font-size: 0.9em;
-}
-
-blockquote {
-  color: #666666;
-  margin: 0;
-  padding-left: 3em;
-  border-left: 0.5em #EEE solid;
-}
-
-hr {
-  display: block;
-  height: 2px;
-  border: 0;
-  border-top: 1px solid #aaa;
-  border-bottom: 1px solid #eee;
-  margin: 1em 0;
-  padding: 0;
-}
-
-pre, code, kbd, samp {
-  color: #000;
-  font-family: monospace, monospace;
-  _font-family: 'courier new', monospace;
-  font-size: 0.98em;
-}
-
-pre {
-  white-space: pre;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-}
-
-b, strong {
-  font-weight: bold;
-}
-
-dfn {
-  font-style: italic;
-}
-
-ins {
-  background: #ff9;
-  color: #000;
-  text-decoration: none;
-}
-
-mark {
-  background-color: #b1e1ff;
-  color: #000;
-  font-style: italic;
-  font-weight: bold;
-}
-
-sub, sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-
-sup {
-  top: -0.5em;
-}
-
-sub {
-  bottom: -0.25em;
-}
-
-ul, ol {
-  margin: 1em 0;
-  padding: 0 0 0 2em;
-}
-
-li p:last-child {
-  margin-bottom: 0;
-}
-
-ul ul, ol ol {
-  margin: .3em 0;
-}
-
-dl {
-  margin-bottom: 1em;
-}
-
-dt {
-  font-weight: bold;
-  margin-bottom: .8em;
-}
-
-dd {
-  margin: 0 0 .8em 2em;
-}
-
-dd:last-child {
-  margin-bottom: 0;
-}
-
-img {
-  border: 0;
-  -ms-interpolation-mode: bicubic;
-  vertical-align: middle;
-}
-
-figure {
-  display: block;
-  text-align: center;
-  margin: 1em 0;
-}
-
-figure img {
-  border: none;
-  margin: 0 auto;
-}
-
-figcaption {
-  font-size: 0.8em;
-  font-style: italic;
-  margin: 0 0 .8em;
-}
-
-table {
-  margin-bottom: 2em;
-  border-bottom: 1px solid #ddd;
-  border-right: 1px solid #ddd;
-  border-spacing: 0;
-  border-collapse: collapse;
-}
-
-table th {
-  padding: .2em 1em;
-  background-color: #eee;
-  border-top: 1px solid #ddd;
-  border-left: 1px solid #ddd;
-}
-
-table td {
-  padding: .2em 1em;
-  border-top: 1px solid #ddd;
-  border-left: 1px solid #ddd;
-  vertical-align: top;
-}
-
-.author {
-  font-size: 1.2em;
-  text-align: center;
-}
-
-@media only screen and (min-width: 480px) {
-  body {
-    font-size: 14px;
-  }
-}
-@media only screen and (min-width: 768px) {
-  body {
-    font-size: 16px;
-  }
-}
-@media print {
-  * {
-    background: transparent !important;
-    color: black !important;
-    filter: none !important;
-    -ms-filter: none !important;
-  }
-
-  body {
-    font-size: 12pt;
-    max-width: 100%;
-  }
-
-  a, a:visited {
-    text-decoration: underline;
-  }
-
-  hr {
-    height: 1px;
-    border: 0;
-    border-bottom: 1px solid black;
-  }
-
-  a[href]:after {
-    content: " (" attr(href) ")";
-  }
-
-  abbr[title]:after {
-    content: " (" attr(title) ")";
-  }
-
-  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
-    content: "";
-  }
-
-  pre, blockquote {
-    border: 1px solid #999;
-    padding-right: 1em;
-    page-break-inside: avoid;
-  }
-
-  tr, img {
-    page-break-inside: avoid;
-  }
-
-  img {
-    max-width: 100% !important;
-  }
-
-  @page :left {
-    margin: 15mm 20mm 15mm 10mm;
-}
-
-  @page :right {
-    margin: 15mm 10mm 15mm 20mm;
-}
-
-  p, h2, h3 {
-    orphans: 3;
-    widows: 3;
-  }
-
-  h2, h3 {
-    page-break-after: avoid;
-  }
-}
-
-  </style>
   <link rel="stylesheet" href="main.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
 </head>
@@ -375,7 +48,7 @@ Los valores máximos y mínimos de <span class="math inline">\(f\)</span> se lla
 <p>Una función <span class="math inline">\(f\)</span> tiene un <strong>máximo relativo</strong> en <span class="math inline">\(c\)</span> si <span class="math inline">\(f(c) \ge f(x)\)</span> cuando <span class="math inline">\(x\)</span> está cerca de <span class="math inline">\(c\)</span>. [Esto significa que <span class="math inline">\(f(c) \ge f(x) \; \forall \; x\)</span> en algún intervalo abierto que contiene a <span class="math inline">\(c\)</span>.]<br />
 Análogamente, <span class="math inline">\(f\)</span> tiene un <strong>mínimo local</strong> en <span class="math inline">\(c\)</span> si <span class="math inline">\(f(c) \le f(x)\)</span> cuando <span class="math inline">\(x\)</span> está cerca de <span class="math inline">\(c\)</span>.</p>
 <h3 id="puntos-críticos">Puntos críticos</h3>
-<p>Agregar … (definicion 6 pag 274)</p>
+<p>Un punto crítico de una función <span class="math inline">\(f\)</span> es un valor <span class="math inline">\(c\)</span> en el dominio de <span class="math inline">\(f\)</span> tal que o <span class="math inline">\(f&#39;(c) = 0\)</span> o <span class="math inline">\(f&#39;(c)\)</span> no existe.</p>
 <h2 id="un-problema-de-optimización-y-análisis">Un problema de optimización y análisis</h2>
 <h3 id="el-problema">El problema</h3>
 <p>Hallar las dimensiones de una lata de gaseosa cilíndrica con un volúmen fijo <span class="math inline">\(V\)</span> que tiene la menor área superficial posible (de esta forma utilizando menos material y reduciendo los costos de manufactura).</p>
@@ -405,13 +78,14 @@ El área del cilindro es la suma del área de la tapa de arriba, la tapa de abaj
     &amp; = 2 \pi r^2 + \frac{2V}{r}
     \end{aligned}
 \]</span></p>
-<p>Observando esto, podemos ver que el área está en función del radio <span class="math inline">\(r\)</span>. De modo que podemos decir que el área es una función <span class="math inline">\(A(r)\)</span></p>
+<p>Observando esto, podemos ver que el área está en función del radio <span class="math inline">\(r\)</span>. De modo que, podemos decir que el área es una función <span class="math inline">\(A(r)\)</span></p>
 <p><span class="math display">\[
     A(r) = 2 \pi r^2+ \frac{2V}{r}
 \]</span></p>
+<p><img src="images/area-function.png" style="height: 25em;"/></p>
 <blockquote>
-<p>Hay que tener en cuenta que <span class="math inline">\(r &gt; 0\)</span> por ende <span class="math inline">\(A(r)\)</span> tiene como dominio <span class="math inline">\(\mathbb{R_{&gt;0}}\)</span>.<br />
-Además la función no está definida en <span class="math inline">\(r = 0\)</span></p>
+<p>Hay que tener en cuenta que <span class="math inline">\(r &gt; 0\)</span> (porque representa el radio), por ende <span class="math inline">\(A(r)\)</span> tiene como dominio <span class="math inline">\(\mathbb{R_{&gt;0}}\)</span>.<br />
+Además, la función no está definida en <span class="math inline">\(r = 0\)</span></p>
 </blockquote>
 <p>Ahora tenemos la función que necesitamos minimizar.</p>
 <p>Comenzaremos por hallar puntos críticos de la función. Derivando encontramos: <span class="math display">\[
@@ -428,10 +102,64 @@ Además la función no está definida en <span class="math inline">\(r = 0\)</sp
         r &amp;= \sqrt[3]{\frac{V}{2 \pi}}
     \end{aligned}
 \]</span></p>
-<p>Un punto crítico para <span class="math inline">\(r\)</span> es <span class="math display">\[
-    r = \sqrt[3]{\frac{V}{2 \pi}}
+<p>Un punto crítico <span class="math inline">\(r_c\)</span> para <span class="math inline">\(A(r)\)</span> es <span class="math display">\[
+    r_c = \sqrt[3]{\frac{V}{2 \pi}}
 \]</span></p>
 <p>Ahora necesitamos confirmar que esto es un mínimo (relativo), y además que es el mínimo absoluto.</p>
-<p>… continuar</p>
+<p>Sabemos por los cálculos anteriores que <span class="math inline">\(A&#39;(r_c) = 0\)</span>, entonces nos interesa descubrir como se comporta <span class="math inline">\(A&#39;(r)\)</span> para valores de <span class="math inline">\(r\)</span> tal que <span class="math inline">\(0 &lt; r &lt; r_c\)</span> y para valores de <span class="math inline">\(r\)</span> tal que <span class="math inline">\(r_c &lt; r\)</span>.</p>
+<p>Evaluando <span class="math inline">\(A&#39;(r)\)</span> en valores dentro de esos intervalos nos da los siguientes resultados:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\(r\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(A&#39;(r)\)</span></th>
+<th style="text-align: center;">Comportamiento de <span class="math inline">\(A(r)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(0 &lt; r &lt; r_c\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(&lt; 0\)</span></td>
+<td style="text-align: center;">Decrece</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(r_c\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(0\)</span></td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(r_c &lt; r\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(&gt; 0\)</span></td>
+<td style="text-align: center;">Crece</td>
+</tr>
+</tbody>
+</table>
+<p>Como la función pasa de tener un comportamiento decreciente a un comportamiento creciente podemos confirmar con seguridad de que <span class="math inline">\(r_c\)</span> se trata de un mínimo relativo.</p>
+<p>Finalmente, también es un mínimo absoluto en el intervalo (0, <span class="math inline">\(\infty\)</span>), ya que es el menor valor en dicho intervalo.</p>
+<blockquote>
+<p>Ya que estamos trabajando sobre un intervalo cerrado, podemos convencernos de lo anterior evaluando <span class="math inline">\(\lim_{r\to\infty} A(r) = \infty\)</span> y <span class="math inline">\(\lim_{r\to0^+} A(r) = \infty\)</span></p>
+</blockquote>
+<p>Recordemos que debemos encontrar todas las dimensiones que forman el cilíndro, ya conocemos el valor de <span class="math inline">\(r\)</span> óptimo, ahora resta encontrar el valor de <span class="math inline">\(h\)</span>. Para ello, solo basta reemplazar <span class="math inline">\(r\)</span> por <span class="math inline">\(r_c\)</span> en la expresión encontrada previamente para <span class="math inline">\(h\)</span>: <span class="math display">\[
+\begin{aligned}
+    h &amp;= \frac{V}{\pi r^2} \\ \\
+      &amp;= \frac{V}{\pi (\sqrt[3]{\frac{V}{2 \pi}})^2} \\ \\
+      &amp;= \frac{V (\sqrt[3]{2 \pi})^2}{\pi (\sqrt[3]{V})^2} \\ \\
+      &amp;= \frac{V}{\sqrt[3]{V^2}} \cdot \frac{\sqrt[3]{4 \pi^2}}{\pi} \\ \\
+      &amp;= \sqrt[3]{\frac{V^3}{V^2}} \cdot \sqrt[3]{\frac{4 \pi^2}{\pi^3}} \\ \\
+      h &amp;= \sqrt[3]{\frac{4V}{\pi}}
+\end{aligned}
+\]</span></p>
+<p>Con esto ya tenemos todas las dimensiones del cilíndro <span class="math inline">\(h\)</span> y <span class="math inline">\(r\)</span>.</p>
+<p>Es interesante notar que: <span class="math display">\[
+\begin{aligned}
+    \frac{h}{r} &amp;= \sqrt[3]{\frac{4V \cdot 2\pi}{\pi \cdot  V}} \\ \\
+        &amp;= \sqrt[3]{8} = 2
+\end{aligned}
+\]</span></p>
+<p>Lo que implica que la altura es 2 veces el radio (<span class="math inline">\(h = 2r\)</span>). Dicho de otra manera, la altura debe ser igual que el diámetro.</p>
+<p>Esto resulta en una lata cilíndrica con forma “cúbica”</p>
+<figure>
+<img src="images/cube_cylinder.png" alt="Cilindro óptimo" /><figcaption>Cilindro óptimo</figcaption>
+</figure>
 </body>
 </html>
