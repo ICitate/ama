@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Notas de Nacho - Unidad 0</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <link rel="stylesheet" href="main.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+</head>
+<body>
+<nav id="TOC">
+<ul>
+<li><a href="#notas---unidad-1">Notas - Unidad 1</a><ul>
+<li><a href="#aproximaciones-de-una-función">Aproximaciones de una función</a><ul>
+<li><a href="#teorema-de-rolle">Teorema de Rolle</a></li>
+</ul></li>
+<li><a href="#teorema-del-valor-medio-lagrange">Teorema del valor medio (Lagrange)</a><ul>
+<li><a href="#teorema">Teorema</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="notas---unidad-1">Notas - Unidad 1</h1>
+<h2 id="aproximaciones-de-una-función">Aproximaciones de una función</h2>
+<!-- ![](images/title-image.png) -->
+<h3 id="teorema-de-rolle">Teorema de Rolle</h3>
+<p>Sea <span class="math inline">\(f\)</span> una función que cumple con las siguientes tres hipótesis:</p>
+<ol type="1">
+<li><span class="math inline">\(f\)</span> es continua en el intervalo cerrado <span class="math inline">\([a, b]\)</span>.<br />
+</li>
+<li><span class="math inline">\(f\)</span> es derivable en el intervalo abierto <span class="math inline">\((a, b)\)</span>.<br />
+</li>
+<li><span class="math inline">\(f(a) = f(b)\)</span><br />
+</li>
+</ol>
+<p>Entonces existe un número <span class="math inline">\(c\)</span> en <span class="math inline">\((a, b)\)</span> tal que <span class="math inline">\(f&#39;(c) = 0\)</span></p>
+<p>Ejemplos de funciones que satisfacen las hipótesis del Teorema de Rolle: <img src="images/rolle-examples.png" /></p>
+<h2 id="teorema-del-valor-medio-lagrange">Teorema del valor medio (Lagrange)</h2>
+<p>Sea <span class="math inline">\(f\)</span> una función que cumple con las siguientes hipótesis:</p>
+<ol type="1">
+<li><span class="math inline">\(f\)</span> es continua en el intervalo cerrado <span class="math inline">\([a, b]\)</span>.<br />
+</li>
+<li><span class="math inline">\(f\)</span> es derivable en el intervalo abierto <span class="math inline">\((a, b)\)</span>.<br />
+</li>
+</ol>
+<p>Entonces existe un número <span class="math inline">\(c\)</span> en <span class="math inline">\((a, b)\)</span> tal que: <span class="math display">\[
+    f&#39;(c) = \frac{f(b)-f(a)}{b-a}
+\]</span></p>
+<h3 id="teorema">Teorema</h3>
+<p>Si <span class="math inline">\(f&#39;(x) = 0\)</span> para todo <span class="math inline">\(x\)</span> en un intervalo <span class="math inline">\((a, b)\)</span>, entonces <span class="math inline">\(f\)</span> es constante en <span class="math inline">\((a, b)\)</span></p>
+<p><strong>Demostración: </strong> Sean <span class="math inline">\(x_1\)</span> y <span class="math inline">\(x_2\)</span> dos valores cualquiera en <span class="math inline">\((a, b)\)</span> con <span class="math inline">\(x1 &lt; x2\)</span>. Como <span class="math inline">\(f\)</span> es derivable en <span class="math inline">\((a, b)\)</span> también lo es en <span class="math inline">\((x_1, x_2)\)</span> y continua en en <span class="math inline">\([x_1, x_2]\)</span>.<br />
+Aplicando el Teorema del valor medio a <span class="math inline">\(f\)</span> en el intervalo <span class="math inline">\([x_1, x_2]\)</span> se obtiene un valor <span class="math inline">\(c\)</span> tal que:</p>
+<p><span class="math display">\[
+    f&#39;(c) = \frac{f(x_2)-f(x_1)}{x_2-x_1}
+\]</span></p>
+<p>Pero como <span class="math inline">\(f&#39;(x) = 0\)</span> para todo <span class="math inline">\(x\)</span>, entonces <span class="math inline">\(f&#39;(c) = 0\)</span>.</p>
+<p><span class="math display">\[
+\begin{aligned}
+    0 &amp;= \frac{f(x_2)-f(x_1)}{x_2-x_1} \\ \\
+    0 &amp;= f(x_2) - f(x_1) 
+\end{aligned}
+\]</span></p>
+<p><span class="math display">\[
+    \implies f(x_2) = f(x_1)
+\]</span></p>
+<p>Por lo tanto, <span class="math inline">\(f\)</span> tiene el mismo valor para dos valores cualquiera <span class="math inline">\(x_1\)</span> y <span class="math inline">\(x_2\)</span> en <span class="math inline">\((a, b)\)</span>. Esto significa que <span class="math inline">\(f\)</span> es constante en <span class="math inline">\((a, b)\)</span></p>
+</body>
+</html>
