@@ -49,10 +49,10 @@
     f(x_1) &gt; f(x_2) \;\; con \; x_1 &lt; x_2 \; en \; I
 \]</span></p>
 <h3 id="qué-nos-dice-f-sobre-f">¿Qué nos dice <span class="math inline">\(f&#39;\)</span> sobre <span class="math inline">\(f\)</span>?</h3>
-<ul>
-<li>Si <span class="math inline">\(f&#39;(x) &gt; 0\)</span> en un intervalo, entonces <span class="math inline">\(f\)</span> es creciente en ese intervalo</li>
-<li>Si <span class="math inline">\(f&#39;(x) &lt; 0\)</span> en un intervalo, entonces <span class="math inline">\(f\)</span> es decreciente en ese intervalo</li>
-</ul>
+<p>Sea <span class="math inline">\(f: [a, b] \rightarrow \mathbb{R}\)</span> una función continua en <span class="math inline">\([a, b]\)</span> y derivable en <span class="math inline">\((a, b)\)</span>. Entonces,<br />
+1. Si <span class="math inline">\(\forall x \in (a,b): f&#39;(x) &gt; 0 \implies f\)</span> es estrictamente creciente en <span class="math inline">\([a, b]\)</span><br />
+2. Si <span class="math inline">\(\forall x \in (a,b): f&#39;(x) &lt; 0 \implies f\)</span> es estrictamente decreciente en <span class="math inline">\([a, b]\)</span><br />
+3. Si <span class="math inline">\(\forall x \in (a,b): f&#39;(x) = 0 \implies f\)</span> es constante en <span class="math inline">\([a, b]\)</span></p>
 <h3 id="concavidad">Concavidad</h3>
 <p>Si el gráfico de <span class="math inline">\(f\)</span> esta por encima de todas sus tangentes en un intervalo <span class="math inline">\(I\)</span>, entonces se dice <strong>cóncava hacia arriba</strong> en <span class="math inline">\(I\)</span>. Análogamente, si el gráfico de <span class="math inline">\(f\)</span> está por debajo de de todas sus tangentes en <span class="math inline">\(I\)</span> se dice <strong>cóncava hacia abajo</strong> en <span class="math inline">\(I\)</span>.</p>
 <h3 id="qué-nos-dice-f-sobre-f-1">¿Qué nos dice <span class="math inline">\(f&#39;&#39;\)</span> sobre <span class="math inline">\(f\)</span>?</h3>
@@ -63,12 +63,10 @@
 <h3 id="punto-de-inflexión">Punto de inflexión</h3>
 <p>Un punto <span class="math inline">\(P\)</span> en una curva <span class="math inline">\(y = f(x)\)</span> se llama punto de inflexión, si <span class="math inline">\(f\)</span> es continua en dicho punto y la curva pasa de un tipo de concavidad a otra en <span class="math inline">\(P\)</span>.</p>
 <h3 id="extremos-absolutos">Extremos absolutos</h3>
-<p>Una función <span class="math inline">\(f\)</span> tiene un <strong>máximo absoluto</strong> en <span class="math inline">\(c\)</span> si <span class="math inline">\(f(c) \ge f(x) \; \forall \; x\)</span> en <span class="math inline">\(D\)</span>, donde <span class="math inline">\(D\)</span> es el dominio de <span class="math inline">\(f\)</span>. El valor <span class="math inline">\(f(c)\)</span> se llama <strong>valor máximo</strong>.<br />
-Análogamente, <span class="math inline">\(f\)</span> tiene un <strong>mínimo absoluto</strong> en <span class="math inline">\(c\)</span> si <span class="math inline">\(f(c) \le f(x) \; \forall \; x\)</span> en <span class="math inline">\(D\)</span> y el valor <span class="math inline">\(f(c)\)</span> se llama <strong>valor mínimo</strong>.<br />
-Los valores máximos y mínimos de <span class="math inline">\(f\)</span> se llaman <strong>valores extremos</strong> de <span class="math inline">\(f\)</span>.</p>
+<p>Sea <span class="math inline">\(f: D \rightarrow \mathbb{R}\)</span>. Se dice que <span class="math inline">\(f\)</span> alcanza un <strong>máximo absoluto</strong> en el conjunto <span class="math inline">\(D\)</span> si existe al menos un <span class="math inline">\(x_M \in D\)</span> tal que <span class="math inline">\(\forall x \in D: f(x) \le f(x_M)\)</span>. Al número <span class="math inline">\(f(x_M)\)</span> se lo denomina <strong>valor máximo absoluto</strong> de la función.<br />
+Análogamente se define el minimo absoluto.</p>
 <h3 id="extremos-relativos">Extremos relativos</h3>
-<p>Una función <span class="math inline">\(f\)</span> tiene un <strong>máximo relativo</strong> en <span class="math inline">\(c\)</span> si <span class="math inline">\(f(c) \ge f(x)\)</span> cuando <span class="math inline">\(x\)</span> está cerca de <span class="math inline">\(c\)</span>. [Esto significa que <span class="math inline">\(f(c) \ge f(x) \; \forall \; x\)</span> en algún intervalo abierto que contiene a <span class="math inline">\(c\)</span>.]<br />
-Análogamente, <span class="math inline">\(f\)</span> tiene un <strong>mínimo local</strong> en <span class="math inline">\(c\)</span> si <span class="math inline">\(f(c) \le f(x)\)</span> cuando <span class="math inline">\(x\)</span> está cerca de <span class="math inline">\(c\)</span>.</p>
+<p>Sea <span class="math inline">\(f: D \rightarrow \mathbb{R}\)</span>. Se dice que <span class="math inline">\(f\)</span> alcanza un máximo relativo en el punto <span class="math inline">\(x_M \in D\)</span> si existe un intervalo abierto <span class="math inline">\(I \subset D\)</span> que contiene a <span class="math inline">\(x_M\)</span> tal que <span class="math inline">\(\forall x \in I: f(x) \le f(x_M)\)</span> Análogamente se define el minimo relativo.</p>
 <h3 id="puntos-críticos">Puntos críticos</h3>
 <p>Un punto crítico de una función <span class="math inline">\(f\)</span> es un valor <span class="math inline">\(c\)</span> en el dominio de <span class="math inline">\(f\)</span> tal que o <span class="math inline">\(f&#39;(c) = 0\)</span> o <span class="math inline">\(f&#39;(c)\)</span> no existe.</p>
 <h2 id="un-problema-de-optimización-y-análisis">Un problema de optimización y análisis</h2>
@@ -130,7 +128,7 @@ Además, la función no está definida en <span class="math inline">\(r = 0\)</s
 <p>Un punto crítico <span class="math inline">\(r_c\)</span> para <span class="math inline">\(A(r)\)</span> es <span class="math display">\[
     r_c = \sqrt[3]{\frac{V}{2 \pi}}
 \]</span></p>
-<p>Ahora necesitamos confirmar que esto es un mínimo (relativo), y además que es el mínimo absoluto.</p>
+<p>Ahora necesitamos confirmar que esto es un minimo (relativo), y además que es el minimo absoluto.</p>
 <p>Sabemos por los cálculos anteriores que <span class="math inline">\(A&#39;(r_c) = 0\)</span>, entonces nos interesa descubrir como se comporta <span class="math inline">\(A&#39;(r)\)</span> para valores de <span class="math inline">\(r\)</span> tal que <span class="math inline">\(0 &lt; r &lt; r_c\)</span> y para valores de <span class="math inline">\(r\)</span> tal que <span class="math inline">\(r_c &lt; r\)</span>.</p>
 <p>Evaluando <span class="math inline">\(A&#39;(r)\)</span> en valores dentro de esos intervalos nos da los siguientes resultados:</p>
 <table>
@@ -159,8 +157,8 @@ Además, la función no está definida en <span class="math inline">\(r = 0\)</s
 </tr>
 </tbody>
 </table>
-<p>Como la función pasa de tener un comportamiento decreciente a un comportamiento creciente podemos confirmar con seguridad de que <span class="math inline">\(r_c\)</span> se trata de un mínimo relativo.</p>
-<p>Finalmente, también es un mínimo absoluto en el intervalo (0, <span class="math inline">\(\infty\)</span>), ya que es el menor valor en dicho intervalo.</p>
+<p>Como la función pasa de tener un comportamiento decreciente a un comportamiento creciente podemos confirmar con seguridad de que <span class="math inline">\(r_c\)</span> se trata de un minimo relativo.</p>
+<p>Finalmente, también es un minimo absoluto en el intervalo (0, <span class="math inline">\(\infty\)</span>), ya que es el menor valor en dicho intervalo.</p>
 <blockquote>
 <p>Ya que estamos trabajando sobre un intervalo cerrado, podemos convencernos de lo anterior evaluando <span class="math inline">\(\lim_{r\to\infty} A(r) = \infty\)</span> y <span class="math inline">\(\lim_{r\to0^+} A(r) = \infty\)</span></p>
 </blockquote>
